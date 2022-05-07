@@ -1,0 +1,118 @@
+---- synchronize Matches (56 in 6 files) ----
+CardReader::printingHasFinished in cardreader.cpp :   stepper.synchronize();
+Marlin.h line 258 :    * Mixing steppers synchronize their enable (and direction) together
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();      
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                           stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :    stepper.synchronize();   
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   stepper.synchronize();  
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :           stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :           stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :       stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();  // wait until the machine is idle
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :       stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :       stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   if (!didE) stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :       stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :       stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :       stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : inline void gcode_M400() { stepper.synchronize(); }
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     // Show initial message and wait for synchronize steppers
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     // Synchronize steppers and then disable extruders steppers for manual filament changing
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :         stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :             stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :             stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :               stepper.synchronize();
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :       stepper.synchronize();
+prepare_move_to_destination_dualx in Marlin_main.cpp :             stepper.synchronize();
+handle_filament_runout in Marlin_main.cpp :       stepper.synchronize();
+manage_inactivity in Marlin_main.cpp :       stepper.synchronize();
+loop in Marlin_main.cpp :     stepper.synchronize();
+stepper.cpp line 1002 : void Stepper::synchronize() { while (planner.blocks_queued()) idle(); }
+Stepper::set_position in stepper.cpp :   synchronize(); // Bad to set stepper counts in the middle of a move
+Stepper::finish_and_disable in stepper.cpp :   synchronize();
+Stepper in stepper.h :     static void synchronize();
+_mbl_goto_xy in ultralcd.cpp :       stepper.synchronize();
+_lcd_level_bed_get_z in ultralcd.cpp :             stepper.synchronize();
+---- enqueue_and_echo_commands_P Matches (60 in 5 files) ----
+CardReader::openAndPrintFile in cardreader.cpp :   enqueue_and_echo_commands_P(PSTR("M24"));
+CardReader::startFileprint in cardreader.cpp :       enqueue_and_echo_commands_P(PSTR("G1 Z-20"));
+CardReader::startFileprint in cardreader.cpp :       enqueue_and_echo_commands_P(PSTR("G90"));   
+CardReader::printingHasFinished in cardreader.cpp :     enqueue_and_echo_commands_P(PSTR(SD_FINISHED_RELEASECOMMAND));
+CardReader::printingHasFinished in cardreader.cpp :       enqueue_and_echo_commands_P(PSTR("M31"));
+Marlin.h line 346 : void enqueue_and_echo_commands_P(const char* cmd); //put one or many ASCII commands at the end of the current buffer, read from flash
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                               enqueue_and_echo_commands_P(PSTR("M84")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							  enqueue_and_echo_commands_P(PSTR("M107"));
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                            //   if((READ(Z_TEST)==0)) enqueue_and_echo_commands_P(PSTR("G1 Z10")); //RASE Z AXIS  
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                             if(TFTcode_seen('X'))enqueue_and_echo_commands_P(PSTR("G28 X"));
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                             if(TFTcode_seen('Y')) enqueue_and_echo_commands_P(PSTR("G28 Y"));
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                             if(TFTcode_seen('Z')) enqueue_and_echo_commands_P(PSTR("G28 Z"));
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                             else if(TFTcode_seen('C'))enqueue_and_echo_commands_P(PSTR("G28"));                     
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                             if(!TFTcode_seen('B')) enqueue_and_echo_commands_P(PSTR("G91"));   //B锟斤拷示锟斤拷锟斤拷锟斤拷锟疥，没B锟斤拷示锟斤拷锟斤拷锟斤拷锟?                                         
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                              enqueue_and_echo_commands_P(PSTR("G90"));                            
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                         //    if((READ(Z_TEST)==0)) enqueue_and_echo_commands_P(PSTR("G1 Z10")); //RASE Z AXIS 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                        //     enqueue_and_echo_commands_P(PSTR("M140 S50")); //HOTBED  
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                        //     enqueue_and_echo_commands_P(PSTR("M104 S190")); //HOTBED    
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                       //      if((READ(Z_TEST)==0)) enqueue_and_echo_commands_P(PSTR("G1 Z10")); //RASE Z AXIS  
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                        //     enqueue_and_echo_commands_P(PSTR("M140 S80")); //HOTBED  
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                         //    enqueue_and_echo_commands_P(PSTR("M104 S240")); //HOTBED  
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                   //       else enqueue_and_echo_commands_P(PSTR("M20"));                                                  
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                              enqueue_and_echo_commands_P(PSTR("G1 Z5 F500")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							 enqueue_and_echo_commands_P(PSTR("G1 X30 Y30 F5000")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							 enqueue_and_echo_commands_P(PSTR("G1 Z0.15 F300")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                               enqueue_and_echo_commands_P(PSTR("G1 Z5 F500")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							 enqueue_and_echo_commands_P(PSTR("G1 X190 Y30 F5000")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							 enqueue_and_echo_commands_P(PSTR("G1 Z0.15 F300")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                               enqueue_and_echo_commands_P(PSTR("G1 Z5 F500")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							 enqueue_and_echo_commands_P(PSTR("G1 X190 Y190 F5000")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							 enqueue_and_echo_commands_P(PSTR("G1 Z0.15 F300"));                            
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                               enqueue_and_echo_commands_P(PSTR("G1 Z5 F500")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							 enqueue_and_echo_commands_P(PSTR("G1 X30 Y190 F5000")); 
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							 enqueue_and_echo_commands_P(PSTR("G1 Z0.15 F300"));                            
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							 enqueue_and_echo_commands_P(PSTR("G1 X100 Y100  Z50 F5000"));  //锟截碉拷锟斤拷锟斤拷位锟斤拷                           
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   enqueue_and_echo_commands_P(PSTR("G28"));  
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :  if(AutoLevelLowSpeedModelFlag)  enqueue_and_echo_commands_P(PSTR("M109 S200"));// EXTRADER 0  200degree   
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   enqueue_and_echo_commands_P(PSTR("G28"));  
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :   enqueue_and_echo_commands_P(PSTR("G28"));   
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :    if(temp==1)enqueue_and_echo_commands_P(PSTR("G91"));
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :    if(temp==2){enqueue_and_echo_commands_P(PSTR("G1 E-5"));} //锟斤拷锟斤拷一锟斤拷
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :    if(temp==3){enqueue_and_echo_commands_P(PSTR("G1 Z+20 E-5")); pauseCMDsendflag=false;temp=0;} //锟斤拷锟斤拷一锟斤拷
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : void enqueue_and_echo_commands_P(const char* pgcode) {
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :         enqueue_and_echo_commands_P(PSTR("G28\nG29 S2"));
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :           enqueue_and_echo_commands_P(PSTR("G28"));
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :       enqueue_and_echo_commands_P(PSTR(Z_PROBE_END_SCRIPT));
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :     enqueue_and_echo_commands_P(PSTR("G28"));//锟饺癸拷锟斤拷锟斤拷锟剿讹拷锟斤拷锟狡讹拷锟竭讹拷
+handle_filament_runout in Marlin_main.cpp :       enqueue_and_echo_commands_P(PSTR(FILAMENT_RUNOUT_SCRIPT));
+manage_inactivity in Marlin_main.cpp :         enqueue_and_echo_commands_P(PSTR("G28"));
+laser_indicate in Marlin_main.cpp : 		enqueue_and_echo_commands_P(PSTR("G28 X0 Y0"));//锟饺癸拷锟斤拷锟斤拷锟剿讹拷锟斤拷锟狡讹拷锟竭讹拷
+print_next_mode in Marlin_main.cpp : 	 //enqueue_and_echo_commands_P(PSTR("G1 Y200")); 
+print_next_mode in Marlin_main.cpp : 	 //enqueue_and_echo_commands_P(PSTR("G1 Z2")); 
+print_next_mode in Marlin_main.cpp : 	 //enqueue_and_echo_commands_P(PSTR("G1 Y10 F1000")); 
+Stepper::isr in stepper.cpp :       if (!cleaning_buffer_counter && (SD_FINISHED_STEPPERRELEASE)) enqueue_and_echo_commands_P(PSTR(SD_FINISHED_RELEASECOMMAND));
+lcd_set_home_offsets in ultralcd.cpp :     enqueue_and_echo_commands_P(PSTR("M428"));
+lcd_enqueue_filament_change in ultralcd.cpp :       enqueue_and_echo_commands_P(PSTR("M600"));
+_lcd_level_bed_get_z in ultralcd.cpp :             enqueue_and_echo_commands_P(PSTR("G28"));
+_lcd_level_bed_continue in ultralcd.cpp :       enqueue_and_echo_commands_P(PSTR("G28"));
+ultralcd.cpp line 2510 :     void reprapworld_keypad_move_home()    { enqueue_and_echo_commands_P(PSTR("G28")); } // move all axes home and wait
+ultralcd.cpp line 2550 :   void menu_action_gcode(const char* pgcode) { enqueue_and_echo_commands_P(pgcode); }

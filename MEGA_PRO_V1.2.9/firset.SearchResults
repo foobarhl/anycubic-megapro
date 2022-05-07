@@ -1,0 +1,9 @@
+---- laser_on_off Matches (8 in 1 files) ----
+Marlin_main.cpp line 244 : char laser_on_off = 0;//锟斤拷锟斤拷指示锟斤拷锟斤拷状态锟斤拷
+DEFINE_PGM_READ_ANY in Marlin_main.cpp :                            laser_on_off = 0;
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 						     laser_on_off = 0;
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 						   if( laser_on_off == 0)
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 						   	 laser_on_off = 1;
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 							 { laser_on_off = 0;
+DEFINE_PGM_READ_ANY in Marlin_main.cpp : 		// G5 Laser_ON_OFF
+laser_indicate in Marlin_main.cpp :   if(laser_on_off==1)
