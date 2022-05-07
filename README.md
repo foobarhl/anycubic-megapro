@@ -2,7 +2,7 @@
 
 This is an import of the MegaPro Firmware v1.2.9 from https://www.thingiverse.com/groups/anycubic-i3-mega-pro/forums/general/topic:48551
 
-This code is not vetted and its status is unknown.  I've uploaded this code for my own reference and testing only - your mileave may vary. - Foo
+This code is not vetted and its status is unknown.  I've uploaded this code for my own reference and testing only - your mileage may vary. - Foo
 
 
 
